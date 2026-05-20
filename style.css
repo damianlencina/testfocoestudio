@@ -6,7 +6,6 @@
   --amber-dark: #d97706;
   --black: #0a0a0a;
   --white: #f5f5f7;
-  --gray: #86868b;
 
   /* Layout */
   --page-max: 1200px;
@@ -669,11 +668,9 @@ strong { font-weight: 600; color: var(--text); }
   background: var(--bg-deep);
   color: var(--bg);
   border-radius: var(--radius-xl);
-  margin: 0 var(--page-pad);
-  max-width: calc(var(--page-max) - 0px);
-  margin-left: auto;
-  margin-right: auto;
   width: calc(100% - calc(var(--page-pad) * 2));
+  max-width: var(--page-max);
+  margin: 0 auto;
   padding: 4.5rem 3rem;
 }
 .section-dark .section-eyebrow { color: var(--amber); }
@@ -1123,6 +1120,10 @@ strong { font-weight: 600; color: var(--text); }
   .process { grid-template-columns: repeat(2, 1fr); gap: 2rem 1.25rem; }
   .process::before { display: none; }
   .section-header-row { flex-direction: column; align-items: flex-start; }
+}
+
+@media (min-width: 881px) {
+  .mobile-menu { display: none !important; }
 }
 
 @media (max-width: 880px) {
